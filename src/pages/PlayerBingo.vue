@@ -54,13 +54,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted, computed, watch } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { generateCard, checkPatterns } from 'src/utils/bingoLogic'
 import { supabase } from 'src/boot/supabase'
-import { useQuasar } from 'quasar'
 import confetti from 'canvas-confetti'
 
-const $q = useQuasar()
 const playerName = ref('')
 const playerId = ref(null)
 const myCard = ref(generateCard())
